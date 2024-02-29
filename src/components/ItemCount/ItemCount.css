@@ -1,0 +1,31 @@
+.counter-container {
+    margin: 10px;
+  }
+  
+  .controls {
+    display: flex;
+    align-items: center;
+  }
+  
+  .button {
+    font-size: 16px;
+    padding: 8px;
+    margin: 4px;
+    cursor: pointer;
+  }
+  
+  .number {
+    margin: 0 10px;
+  }
+  
+  .add-to-cart {
+    background-color: #4caf50; /* Color verde */
+    color: #fff; /* Texto en blanco */
+    border: none;
+  }
+  
+  .add-to-cart:disabled {
+    background-color: #ccc; /* Color gris cuando está deshabilitado */
+    color: #666; /* Texto en gris cuando está deshabilitado */
+    cursor: not-allowed;
+  }

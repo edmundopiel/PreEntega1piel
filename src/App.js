@@ -1,21 +1,31 @@
 import React from 'react';
-import NavBar from './components/NavBar';
-import ItemListContainer from './components/ItemListContainer';
-import ItemCount from './components/ItemCount';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import NavBar from './components/NavBar/NavBar';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import ItemCount from './components/ItemCount/ItemCount';
+import './App.css';
 
-const App = () => {
-  const handleAddToCart = (quantity) => {
-    console.log(`Adding ${quantity} items to the cart`);
-    // Puedes realizar acciones adicionales aquí, como agregar productos al carrito
-  };
-
+function App() {
   return (
-    <div className="app-container">
-      <NavBar />
-      <ItemListContainer greeting="¡Bienvenido a nuestra tienda!" />
-      <ItemCount stock={10} initial={1} onAdd={handleAddToCart} />
+    <div className="App">
+      <Router> {/* Use Router instead of BrowserRouter */}
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<ItemListContainer />} />
+          <Route path="/category/:categoryId" element={<ItemListContainer />} />
+          <Route path="/item/:itemId" element={<ItemDetailContainer />} />
+          <Route path="*" element={<h1>404 NOT FOUND</h1>} />
+        </Routes>
+        <ItemCount
+          initial={1}
+          stock={10}
+          onAdd={(quantity) => console.log('Cantidad agregada ', quantity)}
+        />
+      </Router>
     </div>
   );
-};
+}
 
 export default App;
+
