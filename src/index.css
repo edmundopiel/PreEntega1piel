@@ -5,7 +5,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  list-style-type: none;
 }
 
 code {
@@ -17,13 +16,11 @@ code {
 .navbar-container {
   background-color: #cee4f4;
   padding: 10px;
-  list-style-type: none;
 }
 
 .app-container {
   background-color: #d5d7d5;
   padding: 20px;
-  list-style-type: none;
 }
 
 .navbar-container {
@@ -33,14 +30,11 @@ code {
   justify-content: space-between;
   align-items: center;
   border-radius: 2%;
-  list-style-type: none;
 }
-
 
 .cart-widget-container {
   background-color: #ffffff; /* Fondo lila */
   padding: 5px;
-  list-style-type: none;
 }
 
 .navbar-container {
@@ -49,13 +43,11 @@ code {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  list-style-type: none;
 }
 
 .categories-container {
   display: flex;
   gap: 20px; /* Espacio entre categorías */
-  list-style-type: none;
 }
 
 
@@ -99,7 +91,6 @@ code {
 
 .product-item button:hover {
   background-color: #45a049;
-  list-style-type: none;
 }
 
 
